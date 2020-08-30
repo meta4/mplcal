@@ -77,7 +77,7 @@ class MplCalendar(object):
         # Place subplots in a close grid
         f.subplots_adjust(hspace=0)
         f.subplots_adjust(wspace=0)
-        f.suptitle(m_names[self.month] + ' ' + str(self.year),
+        f.suptitle(m_names[self.month-1] + ' ' + str(self.year),
                    fontsize=20, fontweight='bold')
 
     def show(self, **kwargs):
