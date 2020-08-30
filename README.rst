@@ -9,8 +9,8 @@ Example:
 
 Create this calendar:
 
-.. image:: docs/img/mar.2017.example.png
-  :width: 1483
+.. image:: docs/img/feb.2017.example.png
+  :width: 1470
   :alt: Example output of program
 
 with the code:
