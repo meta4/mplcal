@@ -15,6 +15,7 @@ var/
 *.egg-info/
 .installed.cfg
 *.egg
+*.ipynb
 
 # emacs debris
 *~
@@ -27,3 +28,5 @@ __pycache__/
 *.py[cod]
 *$py.class
 
+# Mac debris
+.DS_Store
