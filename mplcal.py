@@ -20,6 +20,7 @@ class MplCalendar(object):
         # Nesting, from outer to inner, Week, Day, Event_str
         # Save the events data in the same format
         self.events = [[[] for day in week] for week in self.cal]
+        self.colors = [[None for day in week] for week in self.cal]
 
     def _monthday_to_index(self, day):
         '''The 2-d index of the day in the list of lists.
@@ -42,6 +43,13 @@ class MplCalendar(object):
         week, w_day = self._monthday_to_index(day)
         self.events[week][w_day].append(event_str)
 
+    def color_day(self, day, color):
+        'Set square for specified day to specified color'
+        week, w_day = self._monthday_to_index(day)
+        print(week, w_day)
+        self.colors[week][w_day] = color
+        
+
     def _render(self, **kwargs):
         'create the calendar figure'
         plot_defaults = dict(
@@ -59,6 +67,8 @@ class MplCalendar(object):
             for week_day, ax in enumerate(ax_row):
                 ax.set_xticks([])
                 ax.set_yticks([])
+                if self.colors[week][week_day] is not None:
+                    ax.set_facecolor(self.colors[week][week_day])
                 if self.cal[week][week_day] != 0:
                     ax.text(.02, .98,
                             str(self.cal[week][week_day]),

@@ -27,4 +27,8 @@ with the code:
     feb.add_event(20, 'Presidents day')
     feb.add_event(25, 'OSLL Opening Day')
     feb.add_event(28, 'T-Ball Angels vs Dirtbags at OSLL')
+
+    feb.add_event(14, 'Valentines Day!')
+    feb.color_day(14, 'mistyrose')
+
     feb.show()
