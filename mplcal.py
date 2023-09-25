@@ -36,7 +36,7 @@ class MplCalendar(object):
             except ValueError:
                 pass
          # couldn't find the day
-        raise DayNotInMonth("There aren't {} days in the month".format(day))
+        raise DayNotInMonthError("There aren't {} days in the month".format(day))
 
     def add_event(self, day, event_str):
         'Add an event string for the specified day'
